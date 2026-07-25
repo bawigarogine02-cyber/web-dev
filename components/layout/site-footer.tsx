@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CONTACT, FOOTER_LINKS } from "@/constants/site";
+import { assetPath } from "@/lib/asset-path";
 
 export function SiteFooter() {
   return (
     <footer className="bg-[#040f22] py-16 text-white">
       <div className="site-container grid gap-12 md:grid-cols-[1.2fr_.6fr_1fr]">
         <div>
-          <Image src="/logo-transparent.png" alt="Web Dev" width={125} height={125} className="h-auto w-32 drop-shadow-xl" />
+          <Image src={assetPath("/logo-transparent.png")} alt="Web Dev" width={125} height={125} className="h-auto w-32 drop-shadow-xl" />
           <p className="mt-4 leading-relaxed text-white/50">Developing solutions.<br />Building futures. Together.</p>
         </div>
         <nav className="flex flex-col items-start gap-3" aria-label="Footer navigation">

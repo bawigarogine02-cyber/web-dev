@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowUpRight, Bot, Code2, Megaphone, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { assetPath } from "@/lib/asset-path";
 
 const services = [
   { icon: Code2, title: "Custom Website Development", text: "Professional, high-performing websites designed to represent your brand and convert visitors.", items: ["Corporate & business websites", "eCommerce and landing pages", "Custom applications & CMS"] },
@@ -36,7 +37,7 @@ export default function HomePage() {
           </div>
           <div className="relative mx-auto w-full max-w-[520px] rotate-[3deg] border border-white/80 bg-white shadow-2xl">
             <div className="flex justify-between px-7 pt-6 text-base font-bold tracking-widest text-navy/55"><span className="text-green-500">●</span><span>Your digital growth system</span><span>01</span></div>
-            <div className="relative h-[310px]"><Image src="/logo-transparent.png" alt="Web Dev" fill priority className="scale-110 object-contain drop-shadow-xl" /></div>
+            <div className="relative h-[310px]"><Image src={assetPath("/logo-transparent.png")} alt="Web Dev" fill priority className="scale-110 object-contain drop-shadow-xl" /></div>
             <div className="bg-navy px-7 py-5 font-mono text-base leading-relaxed text-white/60">&lt;growth&gt;<br /><span className="pl-5 text-gold">website + automation + marketing</span><br />&lt;/growth&gt;</div>
             <div className="absolute -bottom-10 -right-8 grid h-36 w-36 place-items-center rounded-full border-8 border-gold/20 bg-gold text-center font-bold leading-tight text-navy shadow-2xl">BUILD<br />GROW<br />AUTOMATE<br /><span className="text-2xl">✦</span></div>
           </div>
